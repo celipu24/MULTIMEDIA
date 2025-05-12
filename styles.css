@@ -5,13 +5,13 @@ body {
     background-color: black;
 }
 section {
-    position: relative;
+position: relative;
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    justify-content: center; 
+    align-items: center; 
+    background-color: grey; }
 section img {
     max-width: 100%;
     max-height: 100%;
@@ -22,10 +22,14 @@ section img {
 }
 .compra {
     position: absolute;
-    top: 12.5%;
-    left: 40%;
-    transform: translateX(-50%);
-    text-align: center; 
+    top: 5%;
+    left: 16.5%;
+    width: 60%;
+    text-align: left; 
+    padding: 50px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 15px;
 }
 .compra h2 {
     margin: 0;
@@ -49,6 +53,9 @@ section img {
     margin: 0 0 30px 0;
     font-size: 1.5em; 
     color: white; 
+    border: 2px solid black; 
+    padding: 10px;
+    text-align: center;
 }
 .sec2-Descripcion p {
     margin: 0; 
@@ -58,6 +65,11 @@ section img {
     white-space: normal;
     word-wrap: break-word;
     text-align: justify;
+    background-color: white;
+    border: 2px solid black; 
+    border-radius: 15px; 
+    padding: 15px; 
+    box-shadow: 0 4px 8px black;
 }
 .video-container1 {
     position: absolute;
@@ -99,4 +111,21 @@ section img {
 .tienda-button:active {
     background-color: orange;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.pizza {
+    position: absolute;
+    width: 50px; 
+    height: 50px;
+    pointer-events: none; 
+    animation: fall linear infinite; 
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1; 
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg); 
+        opacity: 0; 
+    }
 }
