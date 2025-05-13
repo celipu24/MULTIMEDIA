@@ -14,4 +14,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
         pizzaContainer.appendChild(pizza);
     }
+    // Pizza scroll. DISCLAIMER: código asistido con IA
+    document.querySelectorAll('.pizza-slice').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const sectionNum = this.getAttribute('data-section');
+            const section = document.querySelector(`.section-${sectionNum}`);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+    const audio = document.getElementById('bg-music');
+    const toggleBtn = document.getElementById('music-toggle');
+    let playing = false;
+
+    function playMusic() {
+        audio.play();
+        toggleBtn.textContent = "⏸️";
+        playing = true;
+    }
+    function pauseMusic() {
+        audio.pause();
+        toggleBtn.textContent = "▶️";
+        playing = false;
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        if (playing) {
+            pauseMusic();
+        } else {
+            playMusic();
+        }
+    });
+
+    playMusic();
 });
