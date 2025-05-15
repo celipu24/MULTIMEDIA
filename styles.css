@@ -52,6 +52,10 @@ section img {
     align-items: center;
     background: #f5f5f5; 
 }
+.faq-section strong {
+    display: block;
+    margin-bottom: 10px;
+}
 .section-6 {
     width: 100vw;
     min-height: 100vh;
