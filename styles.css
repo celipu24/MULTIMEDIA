@@ -58,6 +58,7 @@ section img {
 }
 .faq-section li {
     margin-bottom: 20px;
+     text-align: justify;
 }
 .section-6 {
     width: 100vw;
