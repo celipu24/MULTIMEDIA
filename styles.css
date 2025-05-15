@@ -56,6 +56,9 @@ section img {
     display: block;
     margin-bottom: 10px;
 }
+.faq-section li {
+    margin-bottom: 20px;
+}
 .section-6 {
     width: 100vw;
     min-height: 100vh;
